@@ -20,8 +20,22 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	dev
+	runtimeClasspath {
+		extendsFrom dev
+	}
+}
+
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	dev("org.springframework.boot:spring-boot-devtools")
+}
+
+
+bootRun {
+	// Use Spring Boot DevTool only when we run Gradle bootRun task
+	classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }

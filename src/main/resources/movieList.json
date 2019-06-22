@@ -1,0 +1,18 @@
+[
+    {
+      "movieId": 1,
+      "movieName":"Nannaku Prematho",
+      "movieDescription": "NTR Movie",
+      "movieImage": "image",
+      "rating": 4.3
+    },
+
+    {
+      "movieId": 2,
+      "movieName":"Athadu",
+      "movieDescription": "Mahesh Babu Movie",
+      "movieImage": "image",
+      "rating": 4.2
+    }
+
+]
