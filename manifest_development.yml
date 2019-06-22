@@ -1,0 +1,10 @@
+---
+applications:
+  - name: movieservicedev
+    host: movieservicesdev
+    path: ./build/libs/movieservice-0.0.1-SNAPSHOT.jar
+    instances: 1
+    buildpack: java_buildpack
+    env:
+      SPRING_PROFILES_ACTIVE: cloud,dev
+
