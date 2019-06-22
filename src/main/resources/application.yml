@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+app:
+  name: movieservice
+  description: ${app.name} is a Rest API to provide the movies list
+welcome:
+  message: welcome to ${app.name}
+
+server:
+  port: 8081
+
+---
+
+spring:
+  profiles: dev
+
+
+---
+
+spring:
+  profiles: prod
+

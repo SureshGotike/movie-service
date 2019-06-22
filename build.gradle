@@ -5,13 +5,21 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 
+jar {
+	baseName = 'movieservice'
+	version = '0.0.1-SNAPSHOT'
+}
+
 group = 'com.movie'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
 
 repositories {
 	mavenCentral()
 }
+
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
