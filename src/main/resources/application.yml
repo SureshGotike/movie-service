@@ -3,6 +3,12 @@
 spring:
   profiles:
     active: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: moviedb
+
 app:
   name: movieservice
   description: ${app.name} is a Rest API to provide the movies list
