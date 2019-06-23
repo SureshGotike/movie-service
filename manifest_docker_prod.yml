@@ -1,0 +1,14 @@
+---
+applications:
+  - name: movieservice
+    host: movieservices
+#    path: ./build/libs/movieservice-0.0.1-SNAPSHOT.jar
+    instances: 1
+    env:
+      SPRING_PROFILES_ACTIVE: cloud,prod
+    docker:
+      image: sureshgotike/movies:part1
+      username: sureshgotike
+
+
+##CF_DOCKER_PASSWORD=Suresh**** cf push -f manifest_docker_prod.yml
