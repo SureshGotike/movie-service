@@ -8,6 +8,12 @@ spring:
       host: localhost
       port: 27017
       database: moviedb
+#       host: ds241977.mlab.com
+#       port: 41977
+#       database: CloudFoundry_herkf7ii_vrqbqmdn
+#       username: movieuser
+#       password: moviepassword
+#        uri: mongodb://movieuser:moviepassword@ds241977.mlab.com:41977/CloudFoundry_herkf7ii_vrqbqmdn?ssl=true&authSource=admin&authMechanism=SCRAM-SHA-1
 
 app:
   name: movieservice
