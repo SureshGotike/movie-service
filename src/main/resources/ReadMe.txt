@@ -33,6 +33,7 @@ bootRun {
 
 3. Json Database:
    The movie data is presently kept in Json file as well if you want to access the data without connecting to any database.
+   file name - movieList.json
    a. access following urls to get the data from json file.
       GET : http://localhost:8081/movies/getMovies
 
