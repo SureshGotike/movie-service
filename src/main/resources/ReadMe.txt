@@ -40,12 +40,16 @@ bootRun {
 
 4. Mongo DB - local DB
    a. install mongo db in local
-   b. set the paths in .base_profile file present in /usr/local/userid/ folder. export MONGO_HOME=path of mongodb where it got installed
-      export PATH = $PATH:/$MONGO_HOME/bin
+   b. set the paths in .base_profile file present in /usr/local/userid/ folder.
+      export MONGO_PATH=/usr/local/mongodb
+      export PATH=$PATH:$MONGO_PATH/bin
+
    c. navigate to mongo home and run "mongod" command to start mongo daemon
    d. go to another terminal and run, "mongo" command to start the mongo cli
    e. run the command "use moviedb". this will create db schema.
+
 5. run the spring boot application in local, it will create the collection with name "Movies" in database.
+
 6. run the apis as follows.
    a. GET
       https://movieservice.cfapps.io/movies/getMovieDocs
@@ -74,5 +78,42 @@ bootRun {
    d. access the app urls. it will add/fetch the data from the PCF mongo db instance
 
 
+8. push the app to PCF
+   use corresponding manifest files created under project home directory
+   a. cf push -f manifest_prod.yml
 
+
+Docker:
+
+1.  check docker version.
+    docker -v
+    if not installed, install the docker first
+
+2.  create docker file
+    a. file name: Dockerfile.txt
+
+3.  create docker image:
+    run this command - "docker -f Dockerfile -t movieservice-img ."
+
+4. check if the image is created.
+   "docker images"
+
+4. run the docker image
+   "docker run -it -p 8082:8081 movieservice-img"
+
+
+Docker Hub:
+ 1. login
+    "docker login"
+
+2. tag the image
+   "docker tag movieservice-img sureshgotike/movies:part1"
+
+3. copy the image from local to docker hub
+   "docker push sureshgotike/movies:part1"
+
+4. run the docker hub tag from anywhere
+   a. open terminal and login to docker hub
+   b. "docker run sureshgotike/movies:part1"
+       it will start the application from any terminal where you run from..
 
