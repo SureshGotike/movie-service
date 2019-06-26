@@ -2,6 +2,11 @@ Author: Suresh_Gotike
 
 This is Read me file.
 
+urls:
+http://localhost:8085/movies/getMovieDocs
+http://localhost:8085/movies/getMovies
+http://localhost:8085/movies/createMovieDoc
+
 
 
 Dev Notes:
