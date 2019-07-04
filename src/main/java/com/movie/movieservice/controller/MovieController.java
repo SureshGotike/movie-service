@@ -5,10 +5,12 @@ import com.movie.movieservice.model.MovieDoc;
 import com.movie.movieservice.service.MovieDocService;
 import com.movie.movieservice.service.MovieService;
 import java.util.List;
+import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,6 +50,22 @@ public class MovieController
 
 
     return movies;
+
+  }
+
+
+  @GetMapping("/getMovie/{id}")
+  public MovieDoc getMovie(@PathVariable("id") Long id){
+
+    logger.info("Entered MovieController.getMoviesDocs() with id{}", id);
+    Optional<MovieDoc> movie= movieDocService.getMovie(id);
+
+    logger.debug("movie data with movie id {} is {}", id, movie);
+
+    logger.info("Exited MovieController.getMoviesDocs()");
+
+
+    return movie.get();
 
   }
 

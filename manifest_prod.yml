@@ -9,4 +9,4 @@ applications:
       SPRING_PROFILES_ACTIVE: cloud,prod
 
 
-##cf push manifest_production.yml
+##cf push manifest_production.masyml

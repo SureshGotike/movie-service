@@ -17,9 +17,9 @@ spring:
 
 app:
   name: movieservice
-  description: ${app.name} is a Rest API to provide the movies list
-welcome:
-  message: welcome to ${app.name}
+#  description: ${app.name} is a Rest API to provide the movies list
+#welcome:
+#  message: welcome to ${app.name}
 
 server:
   port: 8081
